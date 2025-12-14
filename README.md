@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clara
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-Rose_&_Stone-e11d48?style=flat-square&logo=tailwind-css)
 
-First, run the development server:
+**Clara** is a financial modeling suite designed for clarity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Moving away from the noise of traditional trading terminals, Clara offers a calm, minimalist environment for complex derivatives pricing and stochastic simulation. It reduces financial engineering to its purest form: input, logic, and insight.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Essence & Utility
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Valuation (Black-Scholes)
 
-## Learn More
+A precise implementation of the Black-Scholes-Merton model. Clara derives the theoretical fair value of European options and visualizes the sensitivity of price to market changes through the Greeks ($\Delta$, $\Gamma$, $\Theta$, $\nu$, $\rho$).
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Simulation (Monte Carlo)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+An exploration of uncertainty. Using Geometric Brownian Motion (GBM), the system projects thousands of potential future price paths to estimate Value at Risk (VaR) and the probability of profit, rendered on a fluid, interactive canvas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Connection (Live Data)
 
-## Deploy on Vercel
+Integrated with AlphaVantage to seamlessly pull real-time spot prices, bridging the gap between theoretical modeling and current market reality.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Harmony (Portfolio)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A dedicated tool for strategic alignment. It compares current asset distribution against target goals, generating a clear schedule of actions to restore balance to your portfolio.
+
+---
+
+## The Foundation
+
+Clara is built on a modern, type-safe stack that prioritizes correctness and user experience.
+
+- **Framework:** Next.js (App Router)
+- **Logic:** TypeScript
+- **Aesthetic:** Tailwind CSS (Glassmorphism & Minimalist Typography)
+- **Visualization:** Recharts
+
+---
+
+## Mathematical Honesty
+
+The core calculations are performed client-side with zero reliance on opaque libraries.
+
+- **Cumulative Distribution:** Utilizes the Abramowitz and Stegun numerical approximation for the standard normal CDF, ensuring precision to six decimal places.
+- **Stochastic Processes:** Random walks are generated using the Box-Muller transform to create normally distributed random variables from uniform sources.
+
+---
+
+**Designed & Developed by Melanie Kwak**
